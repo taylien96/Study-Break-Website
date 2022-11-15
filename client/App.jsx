@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import * as ReactDOM from 'react-dom'
 //import { Provider } from 'react-redux'
 //import store from './store.js'
-import './App.scss'
+import Heading from './components/Head.jsx'
+import './scss/App.scss'
 
 class App extends React.Component {
     constructor(props){
@@ -12,8 +13,7 @@ class App extends React.Component {
     render(){
         return(
             <div>
-                <h1>hello there</h1>
-           
+                <Heading/>
             </div>
         )
     }
