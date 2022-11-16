@@ -14,7 +14,7 @@ import * as actions from '../actions/actions.js';
     const updateUsername = (event)=>{
         // show the user input value to console
         userValue = event.target.value;
-        dispatch(actions.usernameActionCreator(userValue));
+       
         // console.log(userValue);
       };
       const updatePassword = (event)=>{
@@ -25,7 +25,9 @@ import * as actions from '../actions/actions.js';
       };
       const loginFunction = () =>{
         if(userValue === 'taylor' && passwordValue === 'taylor'){
-            dispatch(actions.loginActionCreator(userValue));
+          console.log(userValue)
+          dispatch(actions.usernameActionCreator(userValue))
+          dispatch(actions.loginActionCreator());
         }
       }
     return(

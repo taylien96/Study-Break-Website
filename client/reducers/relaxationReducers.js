@@ -15,7 +15,7 @@ const relaxationReducers = (state = initialState, action) => {
         case types.USERNAME:
             return{
                 ...state,
-                username : action.payload.username
+                username : action.payload.user
             }
               default: {
                 return state;

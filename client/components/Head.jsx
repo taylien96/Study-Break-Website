@@ -14,7 +14,7 @@ import store from '../store.js';
     //maybe render issue here
     const output = [];
     if(props.Loggedin === true){
-        output[0] = <Loggedin username={props.username} key="boop" />
+        output[0] = <Loggedin user={props.username} key="boop" />
     }
     else{
         output[0] = <Login key="loop" />

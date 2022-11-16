@@ -4,13 +4,14 @@ import * as actions from '../actions/actionTypes.js';
 
  
  
-  const Loggedin = props => (
+  const Loggedin = props => {
     //maybe render issue here
     
+    return(
     <div id="userLoggedIn">
-     <p>You're logged in! </p>
-    </div>
-  );
+     <p>You're logged in {props.user}!</p>
+    </div>)
+  };
   
   
   //export default connect(mapStateToProps)(Loggedin)
