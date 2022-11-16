@@ -13,9 +13,9 @@ p{
     flex-direction: row;
     justify-content: space-between;
     display: flex;
-    height: 150px;
+    height: 15%;
     width: 100%;
-    position: fixed;
+    
     margin-right: 50px;
 
 }
@@ -24,6 +24,14 @@ p{
     align-self: center;
     text-align: center;
     font-size: 40px;
+}
+#buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-left: 300px;
+    margin-right: 300px;
+    height: 15%;
 }
 #login {
  display: flex;
@@ -38,4 +46,8 @@ p{
     align-self: center;
     padding-right: 100px;
     margin-right: 100px;
+}
+.navBut{
+    height: 100px;
+    width: 100px;
 }

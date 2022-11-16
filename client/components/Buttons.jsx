@@ -9,8 +9,8 @@ const Buttons = props => {
     
     return(
     <div id="buttons">
-        <button>Interactive Visuals</button>
-        <button>Pokemon</button>
+        <button className='navBut'>Interactive Visuals</button>
+        <button className='navBut'>Pokemon</button>
     </div>)
   };
   

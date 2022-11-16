@@ -30,6 +30,9 @@ import * as actions from '../actions/actions.js';
           dispatch(actions.loginActionCreator());
         }
       }
+      const signUpFunction = () =>{
+        
+      }
     return(
     <div id="login">
         
@@ -39,6 +42,7 @@ import * as actions from '../actions/actions.js';
         </div>
         <div>
         <button onClick={loginFunction} type="button">Login!</button>
+        <button onClick={signUpFunction} type="button">Sign up!</button>
         </div>
     </div>)
   };
