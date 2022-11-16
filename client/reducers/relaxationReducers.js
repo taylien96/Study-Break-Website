@@ -2,6 +2,7 @@ import * as types from '../actions/actionTypes';
 
 const initialState = {
     loggedIn: false,
+    username: ''
 };
 
 const relaxationReducers = (state = initialState, action) => {
@@ -11,6 +12,11 @@ const relaxationReducers = (state = initialState, action) => {
                 ...state,
                 loggedIn: true,
               };
+        case types.USERNAME:
+            return{
+                ...state,
+                username : action.payload.username
+            }
               default: {
                 return state;
               }
