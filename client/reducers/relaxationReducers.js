@@ -2,7 +2,8 @@ import * as types from '../actions/actionTypes';
 
 const initialState = {
     loggedIn: false,
-    username: ''
+    username: '',
+    whichGraphic: 0
 };
 
 const relaxationReducers = (state = initialState, action) => {
@@ -20,6 +21,11 @@ const relaxationReducers = (state = initialState, action) => {
               default: {
                 return state;
               }
+        case types.GRAPHIC:
+            return{
+                ...state,
+                whichGraphic : action.payload.theGraphic
+            }
     }
 }
 export default relaxationReducers;

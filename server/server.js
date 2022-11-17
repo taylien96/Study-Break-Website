@@ -12,8 +12,11 @@ app.get(
 '/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../index.html'))
 })
-app.post('/user', controller.makeProfile)
+app.post('/SignUp', controller.makeProfile, (req, res) => {
+  console.log('routed')
+  res.status(200)})
 app.use((req, res, next) => {
+  console.log('404 happened')
     res.status(404).send("Sorry can't find that!")
   })
   app.use((err, req, res, next) => {

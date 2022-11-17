@@ -10,4 +10,10 @@ export const loginActionCreator = () => ({
         user : username
       }
   });
+  export const graphicActionCreator = (type) => ({
+    type: types.GRAPHIC,
+    payload: {
+        theGraphic : type
+      }
+  });
  

@@ -31,7 +31,7 @@ module.exports = {
          port: 8080,
          hot: true,
          proxy: {
-            '/api':{ target: 'http://localhost:8080/',
+            '/SignUp':{ target: 'http://localhost:8080/',
             router: () => 'http://localhost:3000/'}
           },
       },

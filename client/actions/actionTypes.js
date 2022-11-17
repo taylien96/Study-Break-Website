@@ -6,3 +6,4 @@ export const DELETE_CARD = 'DELETE_CARD';
 */
 export const LOG_IN = 'LOG_IN';
 export const USERNAME = 'USERNAME';
+export const GRAPHIC = 'GRAPHIC'

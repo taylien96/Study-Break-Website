@@ -19,12 +19,12 @@ import store from '../store.js'
       const updatePassword1 = (event)=>{
         // show the user input value to console
         passwordValue = event.target.value;
-        
+        console.log(passwordValue)
         // console.log(userValue);
       };
       const createUser = () => {
     let data = {username : userValue, password : passwordValue}
-    fetch('/user/',{method: 'POST', // or 'PUT'
+    fetch('/SignUp/',{method: 'POST', // or 'PUT'
     headers: {
       'Content-Type': 'application/json',
     },
@@ -32,7 +32,7 @@ import store from '../store.js'
     })
       .then(res => res.json())
       .then((res) => {
-        
+        res
         
       })
     }
@@ -46,7 +46,7 @@ import store from '../store.js'
         <p>Password:</p><input className="loginInput" type='password' onChange={updatePassword1} placeholder='password' id="password"></input>
         </div>
         <div>
-        <button onClick={createUser}>Signup!</button>
+        <button onClick={createUser}>Sign up!</button>
         </div>
         </div>
         </Provider>)
