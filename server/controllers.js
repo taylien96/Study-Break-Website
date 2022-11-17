@@ -2,9 +2,10 @@ const db = require('./models');
 
 const controller = {};
 
-starWarsController.getCharacters = async (req, res, next) => {
+controller.makeProfile = async (req, res, next) => {
     // write code here
     try{
+        console.log(req.body)
     
     next();}
     catch (err) {

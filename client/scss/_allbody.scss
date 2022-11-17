@@ -47,6 +47,12 @@ p{
     padding-right: 100px;
     margin-right: 100px;
 }
+#signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
 .navBut{
     height: 100px;
     width: 100px;
