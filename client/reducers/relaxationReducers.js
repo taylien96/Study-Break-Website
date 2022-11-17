@@ -3,7 +3,8 @@ import * as types from '../actions/actionTypes';
 const initialState = {
     loggedIn: false,
     username: '',
-    whichGraphic: 0
+    whichGraphic: 1,
+    bubbleColor: 'aquamarine'
 };
 
 const relaxationReducers = (state = initialState, action) => {

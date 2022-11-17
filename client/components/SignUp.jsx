@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import store from '../store.js'
  
  
-  const SignUp = props => {
+const SignUp = props => {
     //maybe render issue here
     const dispatch = useDispatch();
     let userValue = '';
