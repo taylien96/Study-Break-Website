@@ -49,5 +49,20 @@ controller.makeProfile = async (req, res, next) => {
     catch (err) {
       return next(err);
   }};
-
+  controller.saveColor = async (req, res, next) => {
+    // write code here
+    const {username} = req.body
+    console.log(username)
+    const {color} =req.body
+    //const checkIfUser = "SELECT * FROM USERS WHERE USERNAME = $1;"
+    const checkIfUser = 'UPDATE users SET colorprefrence = $2 WHERE username = $1;'
+    try{
+        
+        let query =  await db.query(checkIfUser, [username, color])
+        res.locals = { color : 'color updated'}
+    
+    next();}
+    catch (err) {
+      return next(err);
+  }};
 module.exports = controller;

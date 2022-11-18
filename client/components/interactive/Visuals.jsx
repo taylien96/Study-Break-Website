@@ -5,6 +5,7 @@ import * as actions from '/Users/taylien/githubDir/solo-Coding-Project/client/ac
 
 const mapStateToProps = state => (
   {
+      username: state.relax.username,
       color: state.relax.bubbleColor,
   }
 ); 
@@ -24,14 +25,30 @@ const Visuals = props => {
    }
     window.onmousemove = e => {
       animateBubble(e.clientX)}
-  let start = 0;
+  
   const changeColor = x => {
-    if(start > 1){
+    
     colorValue = document.getElementById('color-select').value;
     dispatch(actions.bColorActionCreator(colorValue))}
-    else {
-      start = !start
+    
+  
+  const colorSave = x => {
+    if(props.username.length === 0){
+      alert("You must sign in");
     }
+    colorValue = document.getElementById('color-select').value;
+    fetch('SignUp/color/', {
+  method: 'PATCH',
+  body: JSON.stringify({
+    username : props.username,
+    color: colorValue,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
   }
     return(
       
@@ -44,7 +61,7 @@ const Visuals = props => {
     <option value="rgb(121, 36, 36)">Maroon</option>
     <option value="thistle">Light pink</option>
    
-</select><button>Save color</button></div>
+</select><button onClick={colorSave}>Save color</button></div>
         <p >follow the ball</p><div className='ball'></div></div>
     </div>)
   };

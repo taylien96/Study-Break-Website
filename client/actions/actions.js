@@ -24,4 +24,10 @@ export const bColorActionCreator = (color) => ({
     theColor: color
   }
 })
+export const pokeActionCreator = (pokemon) => ({
+  type: types.POKE,
+  payload: {
+    poke: pokemon
+  }
+})
  

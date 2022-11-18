@@ -20,6 +20,10 @@ app.post('/SignUp/login', controller.loginProfile, (req, res) =>{
 console.log('attempted login')
 res.status(200).json(res.locals)})
 
+app.patch('/SignUp/color', controller.saveColor, (req, res) =>{
+  console.log('attempted color change')
+  res.status(200).json(res.locals)})
+
 app.use((req, res, next) => {
   console.log('404 happened')
     res.status(404).send("Sorry can't find that!")
