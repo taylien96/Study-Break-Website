@@ -14,7 +14,12 @@ app.get(
 })
 app.post('/SignUp', controller.makeProfile, (req, res) => {
   console.log('routed')
-  res.status(200)})
+  res.status(200).json(res.locals)})
+
+app.post('/SignUp/login', controller.loginProfile, (req, res) =>{
+console.log('attempted login')
+res.status(200).json(res.locals)})
+
 app.use((req, res, next) => {
   console.log('404 happened')
     res.status(404).send("Sorry can't find that!")

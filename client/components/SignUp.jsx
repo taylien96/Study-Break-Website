@@ -31,8 +31,13 @@ const SignUp = props => {
     body: JSON.stringify(data),
     })
       .then(res => res.json())
-      .then((res) => {
-        res
+      .then((data) => {
+        if(data.signin.error){
+          alert("Username already taken");
+        }
+        if(data.signin.made){
+          window.location.href = '/'
+        }
         
       })
     }

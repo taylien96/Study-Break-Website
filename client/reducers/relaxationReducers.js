@@ -4,7 +4,8 @@ const initialState = {
     loggedIn: false,
     username: '',
     whichGraphic: 1,
-    bubbleColor: 'aquamarine'
+    bubbleColor: 'aquamarine',
+    favPokemon: ''
 };
 
 const relaxationReducers = (state = initialState, action) => {
@@ -12,6 +13,8 @@ const relaxationReducers = (state = initialState, action) => {
         case types.LOG_IN:
             return {
                 ...state,
+                bubbleColor: action.payload.info.colorprefrence,
+                favPokemon: action.payload.info.favPokemon,
                 loggedIn: true,
               };
         case types.USERNAME:
@@ -26,6 +29,11 @@ const relaxationReducers = (state = initialState, action) => {
             return{
                 ...state,
                 whichGraphic : action.payload.theGraphic
+            }
+        case types.BUBBLE_COLOR:
+            return{
+                ...state,
+                bubbleColor : action.payload.theColor
             }
     }
 }

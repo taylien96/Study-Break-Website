@@ -1,8 +1,10 @@
 import * as types from './actionTypes';
 
-export const loginActionCreator = () => ({
+export const loginActionCreator = (userInfo) => ({
     type: types.LOG_IN,
-    
+    payload: {
+      info : userInfo
+    }
   });
   export const usernameActionCreator = (username) => ({
     type: types.USERNAME,
@@ -16,4 +18,10 @@ export const loginActionCreator = () => ({
         theGraphic : type
       }
   });
+export const bColorActionCreator = (color) => ({
+  type: types.BUBBLE_COLOR,
+  payload: {
+    theColor: color
+  }
+})
  

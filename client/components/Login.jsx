@@ -24,11 +24,27 @@ import {Link} from "react-router-dom"
         // console.log(userValue);
       };
       const loginFunction = () =>{
-        if(userValue === 'taylor' && passwordValue === 'taylor'){
+        let data = { username : userValue, password : passwordValue}
+    fetch('/SignUp/login/',{method: 'POST', // or 'PUT'
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+    })
+      .then(res => res.json())
+      .then((data) => {
+        if(data.loginin.error){
+          alert("Wrong Username or Password");
+        }
+        if(data.loginin.made){
+          console.log(data.loginin.made)
+          dispatch(actions.loginActionCreator(data.loginin.made[0]))
+        }})
+        /*if(userValue === 'taylor' && passwordValue === 'taylor'){
           console.log(userValue)
           dispatch(actions.usernameActionCreator(userValue))
           dispatch(actions.loginActionCreator());
-        }
+        }*/
       }
       
     return(
