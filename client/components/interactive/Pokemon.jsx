@@ -2,7 +2,7 @@ import React, { Component, useEffect } from 'react';
 import { useDispatch, connect } from 'react-redux';
 import { async } from 'regenerator-runtime';
 import { useState } from 'react';
-import * as actions from '/Users/taylien/githubDir/solo-Coding-Project/client/actions/actions.js';
+import * as actions from '../../actions/actions.js'
 //import * as actions from '../actions/actionTypes.js';
 //import store from '../store.js';
 const mapStateToProps = state => (

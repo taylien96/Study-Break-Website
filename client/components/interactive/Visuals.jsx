@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { useDispatch, connect } from 'react-redux';
-import * as actions from '/Users/taylien/githubDir/solo-Coding-Project/client/actions/actions.js'
+import * as actions from '../../actions/actions.js'
 //import * as actions from '../actions/actionTypes.js';
 
 const mapStateToProps = state => (
